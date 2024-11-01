@@ -5,7 +5,8 @@
   ],
   "shell": {
     "scripts": {
-      "test": "deno test $@"
+      "test": "deno test $@",
+      "publish": "deno publish $@"
     }
   }
 }
