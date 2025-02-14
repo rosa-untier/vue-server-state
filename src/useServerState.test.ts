@@ -53,7 +53,10 @@ describe("patches", () => {
       initialData,
       serverCall,
     );
-    patch((data) => data.foo = "new value");
+    const newLocal_1 = "new value";
+    const newLocal = (data: { foo: string; bar: string }): string =>
+      data.foo = newLocal_1;
+    patch(newLocal);
     patch((data) => data.bar = "new value");
     await update();
 
